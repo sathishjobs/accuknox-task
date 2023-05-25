@@ -2,9 +2,6 @@
 
 ## Graph-Library analysic for graph visulation
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
-
 | Library | Open Source | Documentation| Github Open Issues & Stars | library link
 | ------ | ------ | ------| -----| ----
 | cytoscape.js| Yes | Great Documentation | 9 open issues & 9k stars | https://js.cytoscape.org/#introduction
