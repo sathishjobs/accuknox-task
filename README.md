@@ -1,6 +1,6 @@
 
 
-## Library analysic for graph visulation
+## Graph-Library analysic for graph visulation
 
 Dillinger is currently extended with the following plugins.
 Instructions on how to use them in your own application are linked below.
@@ -15,15 +15,15 @@ Instructions on how to use them in your own application are linked below.
 
 The reason I chose Cytpscape.js : 
 -----
-* It is pure js, we can have our own wrapper
+* It is pure js, we can have our own wrapper.
 * It has greate documentation.
-* Lots of Extensions. they decoupled there moudules. current supported Extensions list -> https://js.cytoscape.org/#extensions/ui-extensions
-* If we want some new feture we can create our own widgets/Extensions
+* Lots of Extensions. they decoupled there moudules. currently supported Extensions list -> https://js.cytoscape.org/#extensions/ui-extensions
+* If we want some new feture we can create our own widgets/Extensions.
 * These are the big companies using Cytoscape.js currently - > https://js.cytoscape.org/#introduction/who-uses-cytoscape.js
 * There is one opensource React wrapper around cytoscape.js -> https://github.com/plotly/react-cytoscapejs
 
 
 ## How to run this Graph View Task: 
 * yarn install && yarn start
-* in this example I used below library.
+* In this example I used below library.
 https://github.com/plotly/react-cytoscapejs
