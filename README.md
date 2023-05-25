@@ -10,7 +10,8 @@
 | React graph vis | Yes | Average | 38 open issues & 800 stars | https://github.com/crubier/react-graph-vis
 
 
-The reason I chose Cytpscape.js : 
+The reason I chose Cytoscape.js
+ : 
 -----
 * It is pure js, we can have our own wrapper.
 * It has greate documentation.
