@@ -25,3 +25,7 @@ The reason I chose Cytoscape.js
 * yarn install && yarn start
 * In this example I used below library.
 https://github.com/plotly/react-cytoscapejs
+* Functionality covered : 
+    1) Expand and collpase of gropus, 
+    2) view details of nodes (to right click you will get)
+    
