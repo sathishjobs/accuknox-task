@@ -1,5 +1,13 @@
 
 
+## How to run this Graph View Task: 
+* yarn install && yarn start
+* In this example I used below library.
+https://github.com/plotly/react-cytoscapejs
+* Functionality covered : 
+    1) Expand and collpase of gropus, 
+    2) view details of nodes (to right click you will get)
+    
 ## Graph-Library analysic for graph visulation
 
 | Library | Open Source | Documentation| Github Open Issues & Stars | library link
@@ -14,18 +22,10 @@ The reason I chose Cytoscape.js
  : 
 -----
 * It is pure js, we can have our own wrapper.
-* It has greate documentation.
-* Lots of Extensions. they decoupled there moudules. currently supported Extensions list -> https://js.cytoscape.org/#extensions/ui-extensions
+* It has great documentation.
+* Lots of Extensions. they decoupled there moudules. current supported Extensions list -> https://js.cytoscape.org/#extensions/ui-extensions
 * If we want some new feture we can create our own widgets/Extensions.
 * These are the big companies using Cytoscape.js currently - > https://js.cytoscape.org/#introduction/who-uses-cytoscape.js
 * There is one opensource React wrapper around cytoscape.js -> https://github.com/plotly/react-cytoscapejs
 
 
-## How to run this Graph View Task: 
-* yarn install && yarn start
-* In this example I used below library.
-https://github.com/plotly/react-cytoscapejs
-* Functionality covered : 
-    1) Expand and collpase of gropus, 
-    2) view details of nodes (to right click you will get)
-    

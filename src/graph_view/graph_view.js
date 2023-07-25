@@ -1,12 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import cytoscape from 'cytoscape';
 import CytoscapeComponent from 'react-cytoscapejs';
-import degre from "cytoscape-dagre";
-import nodeHtmlLabel from "cytoscape-node-html-label";
-import expandCollapse from "cytoscape-expand-collapse";
-import contextMenus from 'cytoscape-context-menus';
-import navigator from "cytoscape-navigator"
 import elements from "./data";
+import { GraphViewMiddleWare, options } from './utils';
 import ExpandLess from "./imgs/ic_expand_less.svg";
 import ExpandMore from "./imgs/ic_expand_more.svg";
 import "cytoscape-context-menus/cytoscape-context-menus.css";
@@ -14,49 +9,8 @@ import "cytoscape-navigator/cytoscape.js-navigator.css";
 import styles from "./graph_view.module.css";
 import "./global.css";
 
-cytoscape.use(degre)
-if (typeof cytoscape("core", "expandCollapse") === "undefined") {
-    expandCollapse(cytoscape);
-}
-if (typeof cytoscape("core", "nodeHtmlLabel") === "undefined") {
-    nodeHtmlLabel(cytoscape);
-}
-if (typeof cytoscape("core", "contextMenus") === "undefined") {
-    contextMenus(cytoscape);
-}
-if (typeof cytoscape("core", "navigator") === "undefined") {
-    navigator(cytoscape);
-}
-
-var options = {
-    evtType: "cxttap",
-    menuItems: [
-        {
-            id: "details",
-            content: "View Details...",
-            tooltipText: "View Details",
-            selector: "node, edge",
-            onClickFunction: function (...event) {
-                console.log("I AM FROM ONCLICK EVENT", event);
-                alert("View Details Clicked")
-            },
-            hasTrailingDivider: true,
-            // coreAsWell:true
-        },
-        {
-            id: "generateReport",
-            content: "Generate Report",
-            selector: "node, edge",
-            onClickFunction: function (event) {
-                console.log("I am from generate event");
-                alert("Generate Report Clicked")
-            },
-            hasTrailingDivider: true
-        }
-    ],
-    menuItemClasses: ["custom-menu-item", "custom-menu-item:hover"],
-    contextMenuClasses: ["custom-context-menu"]
-};
+//init GraphMiddleWare
+GraphViewMiddleWare();
 
 export function GraphView() {
     let cyRef = useRef();
@@ -174,12 +128,7 @@ export function GraphView() {
                 boxSelectionEnabled={true}
                 ref={cyRef}
                 cy={(cy) => {
-                    // cyRef = cy;
-
-                    console.log("EVT", cy);
-
-                    var instance = cy.contextMenus(options);
-
+                    cy.contextMenus(options);
                     collapseRef = cy.expandCollapse({
                         layoutBy: {
                             name: "dagre",
